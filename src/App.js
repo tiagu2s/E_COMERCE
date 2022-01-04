@@ -26,16 +26,12 @@ const App = () => {
         setCurrentUser(null);
       }
 
-      console.log("currentUser", currentUser);
-
-      // user ? setCurrentUser(user) : setCurrentUser(null);
-
-      // createUserProfileDocument(user);
+      console.log("currUser=>", currentUser);
     });
     return () => {
       unsubscribeFromAuth();
     };
-  }, [currentUser]);
+  }, []);
   return (
     <div>
       <Header currentUser={currentUser} />
