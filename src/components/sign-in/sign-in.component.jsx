@@ -50,7 +50,7 @@ const SignIn = () => {
 
         <div className="buttons">
           <CustomButton type="submit">Submeter</CustomButton>
-          <CustomButton isGoogleSignIn onClick={signInWithGoogle}>
+          <CustomButton type="button" isGoogleSignIn onClick={signInWithGoogle}>
             Google
           </CustomButton>
         </div>
