@@ -42,6 +42,7 @@ const SignIn = () => {
         />
         <FormInput
           name="password"
+          type="password"
           value={password}
           handleChange={handleChangePassword}
           required

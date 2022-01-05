@@ -68,7 +68,7 @@ const SignUp = () => {
           required
         />
         <FormInput
-          type="text"
+          type="password"
           name="password"
           value={password}
           onChange={handleChangePassword}
@@ -76,7 +76,7 @@ const SignUp = () => {
           required
         />
         <FormInput
-          type="text"
+          type="password"
           name="confirmPassword"
           value={confirmPassword}
           onChange={handleChangeConfirmPassword}
