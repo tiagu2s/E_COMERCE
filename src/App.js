@@ -10,7 +10,7 @@ import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.com
 import Header from "./components/header/header.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
-
+import { selectCurrentUser } from "./redux/user/user.selector";
 const App = ({ setCurrentUser, currentUser }) => {
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
@@ -49,8 +49,8 @@ const App = ({ setCurrentUser, currentUser }) => {
     </div>
   );
 };
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
