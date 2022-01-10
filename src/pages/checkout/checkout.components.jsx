@@ -37,12 +37,14 @@ const Checkout = ({ cartItems, totalAmount }) => {
       <div className="total">
         <span>Total:{totalAmount}€</span>
       </div>
-      <div className="test-warning">
-        * credit card for payments Development <br />
-        4242424242424242
-        <br />
-        <StripeCheckoutButton price={totalAmount} />
-      </div>
+      {totalAmount > 0 && (
+        <div className="test-warning">
+          * credit card for payments Development <br />
+          4242424242424242
+          <br />
+          <StripeCheckoutButton price={totalAmount} />
+        </div>
+      )}
     </div>
   );
 };
